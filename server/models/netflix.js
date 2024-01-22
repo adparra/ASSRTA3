@@ -14,16 +14,38 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Netflix.init({
-    UserID: DataTypes.INTEGER,
-    Subscription: DataTypes.STRING,
-    MonthlyRevenue: DataTypes.INTEGER,
-    JoinDate: DataTypes.STRING,
-    LastPayment: DataTypes.STRING,
-    Country: DataTypes.STRING,
-    Age: DataTypes.INTEGER,
-    Gender: DataTypes.STRING,
-    Device: DataTypes.STRING,
-    PlanDuration: DataTypes.STRING
+    UserID: {
+      type:DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    Subscription: {
+      type:DataTypes.STRING
+    },
+    MonthlyRevenue: {
+      type:DataTypes.INTEGER
+    },
+    JoinDate: {
+      type:DataTypes.STRING
+    },
+    LastPayment: {
+      type:DataTypes.STRING
+    },
+    Country: {
+      type:DataTypes.STRING
+    },
+    Age: {
+      type:DataTypes.INTEGER
+    },
+    Gender: {
+      type:DataTypes.STRING
+    },
+    Device: {
+      type:DataTypes.STRING
+    },
+    PlanDuration: {
+      type:DataTypes.STRING
+    }
   }, {
     sequelize,
     modelName: 'Netflix',
